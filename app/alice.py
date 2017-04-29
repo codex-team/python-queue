@@ -1,7 +1,7 @@
 from server import Server
 
 
-class App(Server):
+class Alice(Server):
 
     def handle(self, message):
         try:
@@ -11,9 +11,9 @@ class App(Server):
 
 
 if __name__ == "__main__":
-    print("App started.")
+    print("Alice started.")
 
-    app = App("localhost", 8889)
+    app = Alice("localhost", 8889)
     app.start_server()
     app.loop()
     app.stop_server()

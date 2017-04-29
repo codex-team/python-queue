@@ -1,12 +1,9 @@
 import json
-import time
-
 import requests
-
 from server import Server
 
 
-class Getter(Server):
+class Bob(Server):
 
     def handle(self, message):
         try:
@@ -22,9 +19,9 @@ class Getter(Server):
 
 
 if __name__ == "__main__":
-    print("Getter started.")
+    print("Bob started.")
 
-    getter = Getter("localhost", 8887)
+    getter = Bob("localhost", 8887)
     getter.start_server()
     getter.loop()
     getter.stop_server()
